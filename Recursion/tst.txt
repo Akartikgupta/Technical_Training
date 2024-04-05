@@ -1,0 +1,11 @@
+1. In recursion we have stack that helps in move forward and backward
+2. Backtracing
+3. Bidirectional 
+4. Also known as Tail Recursion
+5. There are 3 types of recursion :-
+   i) Tail Recursion :- Pre Processing
+   ii) Head Recursion :- Post Processing
+   iii) Tree Recursion :- 
+6. Types of Question
+  i). Recursion with Array --> Collection of Elements.
+  ii). 
