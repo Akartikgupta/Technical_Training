@@ -9,24 +9,39 @@ public class CombinationSum {
         return finalList;
     }
 
+    // static void helper(int nums[], int target, int sum, int index, List<Integer> small, List<List<Integer>> finalList) {
+    //     if (sum == target) {
+    //         finalList.add(new ArrayList<Integer>(small));
+    //         return;
+    //     }
+    //     // iterate all the option
+    //     for (int i = index; i < nums.length; i++) {
+    //         if (sum + nums[i] <= target) {
+    //             small.add(nums[i]);
+
+    //             helper(nums, target, sum + nums[i], i, small, finalList); // Recursion Call
+
+    //             small.remove(small.size() - 1);
+    //         }
+    //         // stack fall and undo
+
+    //     }
+
+    // }
+    // If we are subtracting while going in the depth search
     static void helper(int nums[], int target, int sum, int index, List<Integer> small, List<List<Integer>> finalList) {
-        if (sum == target) {
+        if (sum == 0) {
             finalList.add(new ArrayList<Integer>(small));
-            return;
         }
         // iterate all the option
         for (int i = index; i < nums.length; i++) {
-            if (sum + nums[i] <= target) {
+            if (sum > 0) {
                 small.add(nums[i]);
-
-                helper(nums, target, sum + nums[i], i, small, finalList); // Recursion Call
-
+                helper(nums, target, sum - nums[i], i, small, finalList); // Recursion Call
                 small.remove(small.size() - 1);
+
             }
-            // stack fall and undo
-
         }
-
     }
 
     public static void main(String[] args) {
