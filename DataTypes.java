@@ -1,3 +1,4 @@
+
 public class DataTypes {
     public static strictfp void main(String[] args) {
         int age = 19;// Crete only memory and store the values
