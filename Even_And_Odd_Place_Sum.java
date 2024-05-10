@@ -1,4 +1,5 @@
 
+
 public class Even_And_Odd_Place_Sum {
     public static void main(String[] args) {
         int num = 8765;
